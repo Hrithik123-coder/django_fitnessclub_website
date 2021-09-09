@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %}|Hrith's Fitness Club</title>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFD500;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><strong>Hrith's Fitness & Gym</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus"><strong>About us</strong> </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Services</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="services">Yoga Fitness</a></li>
+            <li><a class="dropdown-item" href="gymnastic">Gymnastic</a></li>
+            
+            <li><a class="dropdown-item" href="calisthenic">Calisthenic</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery"><strong>Gallery</strong> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus"><strong>Contact Us</strong> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit" style="border-color: black; color:white;">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+    
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+{% block body %}{% endblock body %}
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <div class="container1" style="margin-top: 10%;">
+
+              <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-muted">© Hrith's Fitness Club</p>
+            
+                <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+            
+                <ul class="nav col-md-4 justify-content-end">
+                  <li class="nav-item"><a href="/index" class="nav-link px-2 text-muted">Home</a></li>
+                  <li class="nav-item"><a href="/aboutus" class="nav-link px-2 text-muted">About us</a></li>
+                  <li class="nav-item"><a href="/gallery" class="nav-link px-2 text-muted">Gallery</a></li>
+                  <li class="nav-item"><a href="/gymnastic" class="nav-link px-2 text-muted">Gymnastic</a></li>
+                  <li class="nav-item"><a href="/calisthenic" class="nav-link px-2 text-muted">Calisthenic</a></li>
+                  <li class="nav-item"><a href="/services" class="nav-link px-2 text-muted">Yoga Fitness</a></li>
+                </ul>
+                </footer>
+  
+  
+  
+  
+  </body>
+</html>
